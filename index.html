@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>glint</title>
+    <link rel="shortcut icon" href="Assets/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <style>
+        @font-face {
+            font-family: f1;
+            src: url(Assets/f1.ttf);
+        }
+        *{
+            margin: 0%;
+            /* box-sizing: border-box; */
+        }
+        #homepage{
+            width: 100%;
+            height: 900px;
+            background-image: url(Assets/img1.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        #nav{
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+        }
+        #nav>img{
+            width: 80px;
+            height: 26px;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+        
+        #menu>i{
+            color: white;
+            font-size: 30px;
+            padding-right: 20px;
+            padding-top: 20px;
+            cursor: pointer;
+        }
+        #menu>span{
+            font-family: f1;
+            color: rgb(24, 169, 24);
+            /* border: 1px solid white; */
+            height: 26px;
+            cursor: pointer;
+            font-size: 26px;
+            text-transform: uppercase;
+            padding-right: 20px;
+            padding-top: 20px;
+            font-weight: 500;
+            transition: color 0.5s ease-in-out;
+
+        }
+        #menu>span:hover{
+            color: white;
+            transition: color 0.5s ease-in-out;
+
+        }
+        #text{
+            /* border: 1px solid white; */
+            color: white;
+            font-family: f1;
+            position: relative;
+            top: 200px;
+            left: 200px;
+            width: 1000px;
+            height: auto;
+            box-sizing: border-box;
+        }
+        #t1{
+            font-weight: bold;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            position: absolute;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            margin-left: 6px;
+            /* border: 1px solid black; */
+        }
+        #t2{
+            position: absolute;
+            /* border: 1px solid rebeccapurple; */
+            font-size: 3rem;
+            top: 20px;
+            line-height: 1.6;
+        }
+        #icons{
+            /* border: 1px solid white; */
+            display: flex;
+            flex-direction: column;
+            gap: 65px;
+            position: relative;
+            top: 200px;
+            right: 50px;
+            width: auto;
+            float: right;
+        }
+        #icon1{
+            display: flex;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+
+        }
+        #icon1:hover{
+            transition: all ease-in-out 0.5s;
+            color: darkgreen;
+        }
+        #icon2{
+            display: flex;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+
+        }
+        #icon2:hover{
+            transition: all ease-in-out 0.5s;
+            color: darkgreen;
+        }
+        #icon3{
+            display: flex;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+
+        }
+        #icon3:hover{
+            transition: all ease-in-out 0.5s;
+            color: darkgreen;
+        }
+        #icon4{
+            display: flex;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+
+        }
+        #icon4:hover{
+            transition: all ease-in-out 0.5s;
+            color: darkgreen;
+        }
+        #icon5{
+            display: flex;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+
+        }
+        #icon5:hover{
+            transition: all ease-in-out 0.5s;
+            color: darkgreen;
+        }
+        #text1{
+            /* border: 1px solid blue; */
+            position: absolute;
+            right: 50px;
+            font-family: f1;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        #text2{
+            /* border: 1px solid blue; */
+            position: absolute;
+            right: 50px;
+            font-family: f1;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+
+        }
+        #text3{
+            /* border: 1px solid blue; */
+            position: absolute;
+            right: 50px;
+            font-family: f1;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+
+        }
+        #text4{
+            /* border: 1px solid blue; */
+            position: absolute;
+            right: 50px;
+            font-family: f1;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+
+        }
+        #text5{
+            /* border: 1px solid blue; */
+            position: absolute;
+            right: 50px;
+            font-family: f1;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+
+        }
+        #icon1:hover #text1{
+            opacity: 1;
+            transition: all ease-in-out 0.2s;
+        }
+        #icon2:hover #text2{
+            opacity: 1;
+            transition: all ease-in-out 0.2s;
+        }
+        #icon3:hover #text3{
+            opacity: 1;
+            transition: all ease-in-out 0.2s;
+        }
+        #icon4:hover #text4{
+            opacity: 1;
+            transition: all ease-in-out 0.2s;
+        }
+        #icon5:hover #text5{
+            opacity: 1;
+            transition: all ease-in-out 0.2s;
+        }
+        #buttons{
+            /* border: 1px solid blue; */
+            position: relative;
+            top: 650px;
+            left: 200px;
+            box-sizing: border-box;
+            width: 500px;
+            display: flex;
+            gap: 50px;
+        }
+        #b1{
+            border: 2px solid rgb(255, 255, 255);
+            width: 220px;
+            height: 60px;
+            background-color: transparent;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.495);
+            text-transform: uppercase;
+            font-family: f1;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+        }
+        #b1:hover{
+            background-color: white;
+            transition: all ease-in-out 0.5s;
+            color: black;
+            border: 2px solid black;
+        }
+        #b2{
+            border: 2px solid rgb(255, 255, 255);
+            width: 220px;
+            height: 60px;
+            background-color: transparent;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.495);
+            text-transform: uppercase;
+            font-family: f1;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+        }
+        #b2:hover{
+            background-color: white;
+            transition: all ease-in-out 0.5s;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="homepage">
+        <div id="nav">
+            <img src="Assets/logo.webp" alt=""> 
+            <div id="menu">
+                <span>Menu</span>  
+                <i class="fa-solid fa-bars"></i>  
+            </div>  
+        </div>
+        <div id="text">
+            <div id="t1">
+                Welcome to Glint
+            </div>
+            <h1 id="t2">
+                We are a creative group <br>
+                of people who design <br>
+                influential brands and <br>
+                digital experiences. 
+            </h1>
+        </div>
+        <div id="icons">
+            <div id="icon1"><div id="text1">Facebook</div><i class="fa-brands fa-facebook-f"></i></div>
+            <div id="icon2"><div id="text2">Instagram</div><i class="fa-brands fa-instagram"></i></div>
+            <div id="icon3"><div id="text3">Twitter</div><i class="fa-brands fa-twitter"></i></div>
+            <div id="icon4"> <div id="text4">Behance</div><i class="fa-brands fa-behance"></i></div>
+            <div id="icon5"><div id="text5">Dribble</div><i class="fa-brands fa-dribbble"></i></div>
+        </div>
+        <div id="buttons">
+            <button id="b1">start a project</button>
+            <button id="b2">more about us</button>
+        </div>
+    </div>
+</body>
+</html>
